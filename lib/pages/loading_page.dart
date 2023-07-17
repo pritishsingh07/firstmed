@@ -48,11 +48,10 @@ class _LoadingPage extends State<LoadingPage>  {
             children: [
               Card(
                 elevation: 0,
-                color: const Color.fromARGB(255, 0, 122, 122),
                 margin: EdgeInsets.only(
                     bottom: MediaQuery.of(context).size.height * 0.10,top: 80),
                 child: const Image(
-                  image: AssetImage("lib/asset/logo.png"),
+                  image: AssetImage("assets/logo.png"),
                   width: 200,
                   height: 200,
                 ),
@@ -60,9 +59,8 @@ class _LoadingPage extends State<LoadingPage>  {
               const Card(
                 margin: EdgeInsets.zero,
                 elevation: 0,
-                color: Color.fromARGB(255, 0, 122, 122),
                 child: CircularProgressIndicator(
-                  color: Colors.orange,
+                  color: Colors.blueAccent,
                 ),
               ),
             ],
