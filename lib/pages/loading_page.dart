@@ -2,6 +2,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'home_screen.dart';
+import 'login_page.dart';
 
 
 class LoadingPage extends StatefulWidget {
@@ -24,17 +25,15 @@ class _LoadingPage extends State<LoadingPage>  {
               context, MaterialPageRoute(builder: (context) => const HomePage()));
         });
       }else{
-        // Timer(const Duration(seconds: 3), () {
-        //   Navigator.pushReplacement(
-        //       context, MaterialPageRoute(builder: (context) => const StartUp()));
-        // });
+        Timer(const Duration(seconds: 3), () {
+          Navigator.pushReplacement(
+              context, MaterialPageRoute(builder: (context) => const LogInPage()));
+        });
       }
     }catch(exception){
       storage.deleteAll();
       startTimer();
     }
-
-
   }
   @override
   Widget build(BuildContext context) {
