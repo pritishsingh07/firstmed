@@ -1,9 +1,8 @@
 // ignore: file_names
 import 'package:animated_splash_screen/animated_splash_screen.dart';
-import 'package:flutter/cupertino.dart';
+import 'package:firstmed/pages/loading_page.dart';
 import 'package:flutter/material.dart';
 
-import 'home_screen.dart';
 
 
 class SplashScreen extends StatelessWidget {
@@ -17,7 +16,7 @@ class SplashScreen extends StatelessWidget {
       splashIconSize: 200,
       centered: true,
       splash:"assets/logo.png",
-      nextScreen: const HomePage(),
+      nextScreen: const LoadingPage(),
       duration: 2000,
     );
   }
