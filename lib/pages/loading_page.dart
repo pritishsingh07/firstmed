@@ -15,6 +15,13 @@ class LoadingPage extends StatefulWidget {
 
 class _LoadingPage extends State<LoadingPage>  {
   static const storage = FlutterSecureStorage();
+
+
+  @override
+  void initState() {
+    startTimer();
+    super.initState();
+  }
   startTimer()async{
     try{
       String? value = await storage.read(key: 'token');
